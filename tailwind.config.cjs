@@ -19,7 +19,8 @@ module.exports = {
 				accent: '#00c7b6',
 				'accent-dark': '',
 				primary: colors.white,
-				'primary-dark': colors.slate
+				'primary-dark': colors.slate,
+				card: '#1c1e26'
 			}
 		}
 	},

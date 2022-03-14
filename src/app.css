@@ -13,3 +13,7 @@ body[data-theme="dark"] {
 .accent {
     @apply text-accent;
 }
+
+.test {
+	border: 3px solid red;
+}
