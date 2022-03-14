@@ -1,7 +1,7 @@
 <script>
 	import { theme } from '../stores/storage.js';
-	import Sun from './icons/sun.svg';
-	import Moon from './icons/moon.svg';
+	import Sun from './icons/sun.svelte';
+	import Moon from './icons/moon.svelte';
 
 	function setTheme() {
 		if ($theme.mode === 'light') {
