@@ -2,6 +2,9 @@
 	import Projects from '../lib/icons/projects.svelte';
 	import Heart from '../lib/icons/heart.svelte';
 	import Journal from '../lib/icons/journal.svelte';
+	import Github from '../lib/icons/github.svelte';
+	import Mail from '../lib/icons/mail.svelte';
+	import Linkedin from '../lib/icons/linkedin.svelte';
 
 	let currentTime = new Date().getHours();
 	let greet;
@@ -16,30 +19,40 @@
 	}
 </script>
 
-<section class="max-w-5xl mx-auto pt-32 text-center">
+<section class="pt-32 text-center">
 	<h2 class="text-lg">{greet} I'm <span class="accent font-bold">Bille!</span></h2>
 
 	<div class="mt-10 flex justify-center gap-x-6">
 		<a
 			href="#projects"
-			class="p-2 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 shadow-md shadow-black hover:shadow-accent transition duration-500 "
+			class="p-2 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 dark:shadow-lg dark:shadow-black dark:hover:shadow-accent transition duration-500  "
 		>
 			<Projects /> Projects
 		</a>
 		<a
 			href="#interest"
-			class="p-2 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 shadow-md shadow-black hover:shadow-accent transition duration-500"
+			class="p-2 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 dark:shadow-lg dark:shadow-black dark:hover:shadow-accent transition duration-500 "
 		>
 			<Heart styling="text-red-600" /> Interest
 		</a>
 		<a
 			href="#experience"
-			class="p-2 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 shadow-md shadow-black hover:shadow-accent transition duration-500"
+			class="p-2 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 dark:shadow-lg dark:shadow-black dark:hover:shadow-accent transition duration-500 "
 		>
 			<Journal styling="text-purple-400" /> Experience
 		</a>
 	</div>
 </section>
 
-<section class="">
+<section class="flex justify-around mt-20">
+	<div class="flex-1">
+		<h2 class="text-base font-medium">I'm a Junior Full-Stack Developer,</h2>
+		<h3 class="text-base indent-8">Focused on creating efficient applications.</h3>
+		<p />
+	</div>
+	<div class="flex-1 flex justify-center gap-x-8 items-center">
+		<a href="https://github.com/BilleLind"><Github styling="w-10 h-10 hover:text-accent" /></a>
+		<a href="https://www.linkedin.com/in/anders-bille-lind-185074200/"><Linkedin styling="w-10 h-10 hover:text-accent" /></a>
+		<a href="mailto:anders.bille.lind@gmail.com"><Mail styling="w-10 h-10 hover:text-accent" /></a>
+	</div>
 </section>
