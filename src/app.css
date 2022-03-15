@@ -13,3 +13,16 @@ body[data-theme="dark"] {
 .accent {
     @apply text-accent;
 }
+.accent-button {
+	@apply focus:outline-none focus:border-accent dark:focus:border-accent dark:hover:border-accent focus:text-accent hover:text-accent
+}
+
+.test {
+	border: 3px solid red;
+}
+
+
+
+html {
+ font-family: Arial, Helvetica, sans-serif;	
+}

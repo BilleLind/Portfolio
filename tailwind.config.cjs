@@ -16,10 +16,11 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				accent: '#228b22',
+				accent: '#00c7b6',
 				'accent-dark': '',
 				primary: colors.white,
-				'primary-dark': colors.slate
+				'primary-dark': colors.slate,
+				card: '#1c1e26'
 			}
 		}
 	},

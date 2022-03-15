@@ -15,7 +15,7 @@
 
 <Nav />
 
-<main class="max-w-5xl mx-auto">
+<main class="">
 	<slot />
 </main>
 
