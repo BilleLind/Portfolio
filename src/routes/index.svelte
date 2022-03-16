@@ -19,25 +19,25 @@
 	}
 </script>
 
-<section class="pt-32 text-center">
-	<h2 class="text-lg">{greet} I'm <span class="accent font-bold">Bille!</span></h2>
+<section class="pt-32">
+	<h2 class="text-lg text-center">{greet} I'm <span class="accent font-bold">Bille!</span></h2>
 
-	<div class="mt-10 flex justify-center gap-x-6">
+	<div class="mt-10 flex flex-col md:flex-row items-center justify-center gap-6 ">
 		<a
 			href="#projects"
-			class="p-2 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 dark:shadow-lg dark:shadow-black dark:hover:shadow-accent transition duration-500  "
+			class="p-3 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 dark:shadow-lg dark:shadow-black dark:hover:shadow-accent transition duration-500  "
 		>
-			<Projects /> Projects
+			<Projects styling=""/> Projects
 		</a>
 		<a
 			href="#interest"
-			class="p-2 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 dark:shadow-lg dark:shadow-black dark:hover:shadow-accent transition duration-500 "
+			class="p-3 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 dark:shadow-lg dark:shadow-black dark:hover:shadow-accent transition duration-500 "
 		>
 			<Heart styling="text-red-600" /> Interest
 		</a>
 		<a
 			href="#experience"
-			class="p-2 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 dark:shadow-lg dark:shadow-black dark:hover:shadow-accent transition duration-500 "
+			class="p-3 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 dark:shadow-lg dark:shadow-black dark:hover:shadow-accent transition duration-500 "
 		>
 			<Journal styling="text-purple-400" /> Experience
 		</a>

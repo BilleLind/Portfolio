@@ -1,12 +1,14 @@
 <script>
-    import SetTheme from './setTheme.svelte' 
+    import SetTheme from './setTheme.svelte'
+    import Menu from './icons/menu.svelte'
+    let links = [
+        {label: "Anders Bille Lind", url: "/", styling:"text-lg col-span-2"},
+        {label: "Blog", url: "/blog", styling:"col-span-1 text-center"},
+        {label: "Resume", url: "/resume", styling:"col-span-1 text-center"}
+    ]
 </script>
 
-<nav class="flex items-center justify-between pt-8">
-    <div class="flex items-center gap-x-8">
-        <a href="/" class="hover:underline text-lg">Anders Bille Lind</a>
-        <a href="/blog" class="hover:underline ">Blog</a>
-        <a href="/resume" class="hover:underline ">Resume</a>
-    </div>
+<nav class="flex items-center justify-between pt-8 landscape:max-w-[70%] landscape:mx-auto">
+    <Menu links={links}/>
     <SetTheme/>
 </nav>
