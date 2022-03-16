@@ -3,8 +3,8 @@
     import Menu from './icons/menu.svelte'
     let links = [
         {label: "Anders Bille Lind", url: "/", styling:"text-lg col-span-2"},
-        {label: "Blog", url: "/blog", styling:"col-span-1 text-center"},
-        {label: "Resume", url: "/resume", styling:"col-span-1 text-center"}
+        {label: "Blog", url: "/blog", styling:"text-base col-span-1 text-center"},
+        {label: "Resume", url: "/resume", styling:"text-base col-span-1 text-center"}
     ]
 </script>
 

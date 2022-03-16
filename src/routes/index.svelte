@@ -1,3 +1,6 @@
+<svelte:head>
+	<title>BilleLind's Portfolio</title>
+</svelte:head>
 <script>
 	import Projects from '../lib/icons/projects.svelte';
 	import Heart from '../lib/icons/heart.svelte';
@@ -19,24 +22,29 @@
 	}
 </script>
 
+
+
 <section class="pt-32">
 	<h2 class="text-lg text-center">{greet} I'm <span class="accent font-bold">Bille!</span></h2>
 
 	<div class="mt-10 flex flex-col md:flex-row items-center justify-center gap-6 ">
 		<a
 			href="#projects"
+			aria-label="Go to projects"
 			class="p-3 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 dark:shadow-lg dark:shadow-black dark:hover:shadow-accent transition duration-500  "
 		>
 			<Projects styling=""/> Projects
 		</a>
 		<a
-			href="#interest"
+			href="#interests"
+			aria-label="Go to interests"
 			class="p-3 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 dark:shadow-lg dark:shadow-black dark:hover:shadow-accent transition duration-500 "
 		>
 			<Heart styling="text-red-600" /> Interest
 		</a>
 		<a
 			href="#experience"
+			aria-label="Go to experience"
 			class="p-3 rounded-xl flex gap-x-2 items-center text-accent bg-slate-900 dark:shadow-lg dark:shadow-black dark:hover:shadow-accent transition duration-500 "
 		>
 			<Journal styling="text-purple-400" /> Experience
@@ -51,8 +59,8 @@
 		<p />
 	</div>
 	<div class="flex-1 flex justify-center gap-x-8 items-center">
-		<a href="https://github.com/BilleLind"><Github styling="w-10 h-10 hover:text-accent" /></a>
-		<a href="https://www.linkedin.com/in/anders-bille-lind-185074200/"><Linkedin styling="w-10 h-10 hover:text-accent" /></a>
-		<a href="mailto:anders.bille.lind@gmail.com"><Mail styling="w-10 h-10 hover:text-accent" /></a>
+		<a href="https://github.com/BilleLind" aria-label="Github link"><Github styling="w-10 h-10 hover:text-accent" /></a>
+		<a href="https://www.linkedin.com/in/anders-bille-lind-185074200/" aria-label="linkedin link"><Linkedin styling="w-10 h-10 hover:text-accent" /></a>
+		<a href="mailto:anders.bille.lind@gmail.com" aria-label="Mailto link"><Mail styling="w-10 h-10 hover:text-accent" /></a>
 	</div>
 </section>
