@@ -25,7 +25,11 @@
 	}
 </script>
 
-<button on:click={setTheme} aria-label={$theme.mode} class="p-1 rounded-xl border-2 border-primary-dark-800 dark:border-white accent-button">
+<button
+	on:click={setTheme}
+	aria-label={$theme.mode}
+	class="p-1 rounded-xl border-2 border-primary-dark-800 dark:border-white accent-button"
+>
 	{#if $theme.mode == 'dark'}
 		<Sun />
 	{:else if $theme.mode == 'light'}

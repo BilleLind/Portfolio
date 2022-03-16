@@ -6,7 +6,7 @@
 	import { onMount } from 'svelte';
 	import { theme } from '../stores/storage';
 	onMount(() => {
-	    theme.useLocalStorage();
+		theme.useLocalStorage();
 		if (window.matchMedia('(prefers-color-scheme: light)').matches) {
 			theme.set({ ...$theme, mode: 'light' });
 		}
