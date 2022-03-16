@@ -44,10 +44,10 @@
 	</div>
 </section>
 
-<section class="flex justify-around mt-20">
-	<div class="flex-1">
-		<h2 class="text-base font-medium">I'm a Junior Full-Stack Developer,</h2>
-		<h3 class="text-base indent-8">Focused on creating efficient applications.</h3>
+<section class="flex flex-col xl:flex-row gap-y-12 justify-around mt-20">
+	<div class="flex-1 text-center">
+		<h2 class="text-base md:text-lg font-medium whitespace-nowrap">I'm a Junior Full-Stack Developer,</h2>
+		<h3 class="">Focused on creating efficient applications.</h3>
 		<p />
 	</div>
 	<div class="flex-1 flex justify-center gap-x-8 items-center">

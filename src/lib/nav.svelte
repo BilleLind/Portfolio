@@ -8,7 +8,7 @@
     ]
 </script>
 
-<nav class="flex items-center justify-between pt-8 landscape:max-w-[70%] landscape:mx-auto">
+<nav class="flex items-center justify-between pt-8 ">
     <Menu links={links}/>
     <SetTheme/>
 </nav>
