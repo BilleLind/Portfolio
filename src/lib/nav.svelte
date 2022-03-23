@@ -8,7 +8,7 @@
 	];
 </script>
 
-<nav class="flex items-center justify-between pt-8 ">
+<nav class="flex items-center justify-between pt-8">
 	<Menu {links} />
 	<SetTheme />
 </nav>
