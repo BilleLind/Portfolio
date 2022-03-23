@@ -53,8 +53,12 @@
 
 	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-center w-full">
 		<PCard
-			image={{ src: '/static/images/redeemTech.jpg', alt: 'Image of Redeem Tech' }}
+			image={{
+				src: 'https://res.cloudinary.com/billelind/image/upload/c_scale,w_400/v1648061663/redeemtech_icl3pg.jpg',
+				alt: 'Image of Redeem Tech'
+			}}
 			title="Redeem Tech"
+			link="https://redeemtech.dk"
 			desc="Created Redeem Tech's new Web application, including a custom Admin Panel with the ability to change various content."
 		>
 			<Tag link="https://laravel.com" styling="text-purple-400">Laravel</Tag>
@@ -62,7 +66,10 @@
 			<Tag link="https://www.postgresql.org/" styling="text-accent">PostgreSQL</Tag>
 		</PCard>
 		<PCard
-			image={{ src: '/static/images/connect.jpg', alt: 'Image of Zealand Connect' }}
+			image={{
+				src: 'https://res.cloudinary.com/billelind/image/upload/c_scale,f_auto,w_400/v1648061663/zealand_connect_glstaq.jpg',
+				alt: 'Image of Zealand Connect'
+			}}
 			title="Zealand Connect"
 			desc="A collaborative effort of the CS team developed with the school as the customer and in 4 scrum teams."
 			gLink="https://github.com/EWCMF/zealand_connect"
@@ -75,4 +82,4 @@
 </section>
 
 <!-- Tools/languages/interests -->
-<section class="grid grid-cols-2 md:grid-cols-4" />
+<section class="grid grid-cols-2 md:grid-cols-4 mt-20" />

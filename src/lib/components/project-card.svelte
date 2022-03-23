@@ -10,10 +10,10 @@
 		<div class="flex justify-between">
 			<h4 class="text-base">{title}</h4>
 			<div class="flex">
-				{#if link}
+				{#if gLink}
 					<a href={gLink} rel="norefferor" target="_blank"><Github styling="hover:bg-primary-dark-600 rounded-xl p-1 w-8 h-8" /></a>
 				{/if}
-				{#if gLink}
+				{#if link}
 					<a href={link} rel="norefferor" target="_blank"><Link styling="hover:bg-primary-dark-600 rounded-xl p-1 w-8 h-8" /></a>
 				{/if}
 			</div>
