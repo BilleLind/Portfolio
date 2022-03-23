@@ -7,7 +7,7 @@ html {
 }
 
 body {
-	@apply bg-gradient-to-tr from-slate-200 to-slate-300 text-black;
+	@apply bg-gradient-to-tr from-slate-500 to-slate-600 text-white;
 }
 
 body[data-theme='dark'] {
