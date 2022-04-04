@@ -37,7 +37,7 @@
 			<a href="https://github.com/BilleLind" aria-label="Github link"
 				><Github styling="w-10 h-10" /></a
 			>
-			<a href="https://www.linkedin.com/in/anders-bille-lind-185074200/" aria-label="linkedin link"
+			<a href="https://www.linkedin.com/in/anders-bille-lind/" aria-label="linkedin link"
 				><Linkedin styling="w-10 h-10 " /></a
 			>
 			<a href="mailto:anders.bille.lind@gmail.com" aria-label="Mailto link"
