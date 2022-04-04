@@ -2,20 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-	font-family: Arial, Helvetica, sans-serif;
+* {
+	/* Brand Foundation, main color(background) */
+	--brand-hue: 222;
+	--brand-saturation: 47%;
+	--brand-lightness: 11%;
+
+	/* Accent */
+	--accent-hue: 175;
+	--accent-saturation: 100%;
+	--accent-lightness: 39%;
+
+	/* Dark */
+	--brand-dark: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+	--text-pri-dark: hsl(var(--brand-hue) 15% 85%);
+	--text-sec-dark: hsl(var(--brand-hue) 5% 65%);
+	--surface-dark: hsl(var(--brand-hue) 10% 10%);
+	--surface-hover-dark: hsl(var(--brand-hue) 10% 15%); /* Experimental */
+	--surface-focus-dark: hsl(var(--brand-hue) 5% 20%); /* Experimental */
+	--surface-shadow-dark: hsl(var(--brand-hue) 10% 20%);
+	--shadow-strength-dark: 0.02;
+	--accent-dark: hsl(var(--accent-hue) var(--accent-saturation) var(--accent-lightness));
+
+	/* Light */
+	--brand-light: hsl(var(--brand-hue) 60% 90%);
+	--text-pri-light: hsl(var(--brand-hue) var(--brand-saturation) 10%);
+	--text-sec-light: hsl(var(--brand-hue) 5% 65%);
+	--surface-light: hsl(var(--brand-hue) 10% 10%);
+	--surface-hover-light: hsl(var(--brand-hue) 10% 15%); /* Experimental */
+	--surface-focus-light: hsl(var(--brand-hue) 5% 20%); /* Experimental */
+	--surface-shadow-light: hsl(var(--brand-hue) 50% 3%);
+	--shadow-strength-light: 0.8;
+	--accent-light: hsl(var(--brand-hue) var(--accent-saturation) 30%);
+}
+
+:root {
+	color-scheme: dark;
+
+	/* Set the default color scheme */
+	--brand: var(--brand-dark);
+	--text-pri: var(--text-pri-dark);
+	--text-sec: var(--text-sec-dark);
+	--surface: var(--surface-dark);
+	--surface-hover: var(--surface-hover-dark);
+	--surface-focus: var(--surface-focus-dark);
+	--surface-shadow: var(--surface-shadow-dark);
+	--shadow-strength: var(--shadow-strength-dark);
+	--accent: var(--accent-dark);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color-scheme: light;
+
+		--brand: var(--brand-light);
+		--text-pri: var(--text-pri-light);
+		--text-sec: var(--text-sec-light);
+		--surface: var(--surface-light);
+		--surface-hover: var(--surface-hover-light);
+		--surface-focus: var(--surface-focus-light);
+		--surface-shadow: var(--surface-shadow-light);
+		--shadow-strength: var(--shadow-strength-light);
+		--accent: var(--accent-light);
+	}
+}
+
+body[data-theme="dark"] {
+	color-scheme: dark;
+
+	--brand: var(--brand-dark);
+	--text-pri: var(--text-pri-dark);
+	--text-sec: var(--text-sec-dark);
+	--surface: var(--surface-dark);
+	--surface-hover: var(--surface-hover-dark);
+	--surface-focus: var(--surface-focus-dark);
+	--surface-shadow: var(--surface-shadow-dark);
+	--shadow-strength: var(--shadow-strength-dark);
+	--accent: var(--accent-dark);
+}
+body[data-theme="light"] {
+	color-scheme: light;
+
+		--brand: var(--brand-light);
+		--text-pri: var(--text-pri-light);
+		--text-sec: var(--text-sec-light);
+		--surface: var(--surface-light);
+		--surface-hover: var(--surface-hover-light);
+		--surface-focus: var(--surface-focus-light);
+		--surface-shadow: var(--surface-shadow-light);
+		--shadow-strength: var(--shadow-strength-light);
+		--accent: var(--accent-light);
 }
 
 body {
-	@apply bg-gradient-to-tr from-slate-500 to-slate-600 text-white;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--brand);
+	color: var(--text-pri);
 }
 
-body[data-theme='dark'] {
-	@apply bg-gradient-to-tr from-slate-800 to-slate-900 text-white;
-}
 
 .accent {
-	@apply text-accent;
+	color: var(--accent);
 }
 .accent-button {
 	@apply focus:outline-none focus:border-accent dark:focus:border-accent dark:hover:border-accent focus:text-accent hover:text-accent;

@@ -16,8 +16,7 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				accent: '#00c7b6',
-				'accent-dark': '',
+				accent: 'var(--accent)',
 				primary: colors.white,
 				'primary-dark': colors.slate,
 				card: '#1c1e26'
