@@ -7,6 +7,8 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@vueuse/core": "^8.6.0",
+    "@vueuse/nuxt": "^8.6.0",
     "nuxt": "3.0.0-rc.3"
   }
 }
