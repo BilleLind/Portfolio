@@ -7,6 +7,8 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@iconify-json/carbon": "^1.1.5",
+    "@unocss/nuxt": "^0.39.3",
     "@vueuse/core": "^8.7.4",
     "@vueuse/nuxt": "^8.7.4",
     "nuxt": "3.0.0-rc.4"
