@@ -1,12 +1,11 @@
-html { 
-    
+html {
+  background-color: aliceblue;
+  color: #222;
+  color-scheme: dark;
 }
 
 html.dark {
-    
-}
-
-
-.app {
-
+  background-color: #222;
+  color-scheme: dark;
+  color: aliceblue;
 }
