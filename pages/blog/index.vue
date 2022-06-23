@@ -1,12 +1,11 @@
 <script>
-// This will also work in `<script setup>`
 definePageMeta({
   layout: "default",
 });
 </script>
-
+<!-- the ContentDoc is a catch all route, which in this case utilized the .md inside the /content/blog folder -->
 <template>
-    <div text-center text-2xl mt-20>
-        /blog index page
-    </div>
+   <main class="mx-auto mt-20 prose">
+      <ContentDoc />
+   </main>
 </template>
