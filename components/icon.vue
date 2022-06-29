@@ -4,7 +4,7 @@ defineProps<{ logo: string }>()
 
 
 <template>
-  <h4 flex border-1 border-gray p-2 rounded-lg max-w-min><i mr-1 md:mr-2 :class="'i-logos-' + logo"></i>
+  <h4 flex border-1 border-gray p-2 rounded-lg max-w-min><i mr-1 md:mr-2  :class="logo"></i>
     <slot />
   </h4>
 </template>

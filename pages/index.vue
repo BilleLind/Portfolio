@@ -19,16 +19,21 @@ definePageMeta({
     <section mt-20>
       <h2 heading boder-2 border-b border-dashed>Tool Box</h2>
 
-      <div grid grid-cols-4 m-3 gap-6>
-        <Icon logo="laravel">Laraval</Icon>
-        <Icon logo="vue">Vue</Icon>
-         <Icon logo="nuxt">Nuxt</Icon>
-        <Icon logo="fastify-icon">Fastify</Icon>
-        <Icon logo="nodejs-icon">Node</Icon>
-        <Icon logo=""></Icon>
-        <Icon logo=""></Icon>
-        <Icon logo=""></Icon>
-        <Icon logo=""></Icon>
+      <div grid grid-cols-5 m-3 gap-6>
+        <Icon logo="i-logos-laravel">Laraval</Icon>
+        <Icon logo="i-logos-vue">Vue</Icon>
+        <Icon logo="i-logos-nuxt-icon">Nuxt</Icon>
+        <Icon logo="i-logos-fastify-icon">Fastify</Icon>
+        <Icon logo="i-logos-nodejs-icon">Node</Icon>
+        <Icon logo="i-logos-tailwindcss-icon">Tailwindcss</Icon>
+        <Icon logo="i-logos-vitejs">Vitejs</Icon>
+        <Icon logo="i-logos-git-icon">Git</Icon>
+       <!--  <Icon logo="i-logos-"></Icon>
+        <Icon logo="i-logos-"></Icon>
+        <Icon logo="i-logos-"></Icon>
+        <Icon logo="i-logos-"></Icon> -->
+
+        <Icon logo="i-logos-react">React</Icon>
       </div>
     </section>
 
