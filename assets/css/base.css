@@ -1,11 +1,11 @@
 html {
-  background-color: aliceblue;
+  background-color: lightgray;
   color: #222;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html.dark {
-  background-color: #222;
+  background-color: hsl(212 32% 8%);
   color-scheme: dark;
-  color: aliceblue;
+  color: hsl(212 32% 92%);
 }
