@@ -1,28 +1,18 @@
 {
-  "name": "portfolio",
-  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
-    "prepare": "svelte-kit sync",
-    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "next",
-    "autoprefixer": "^10.4.2",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-svelte3": "^3.2.1",
-    "postcss": "^8.4.8",
-    "prettier": "^2.5.1",
-    "prettier-plugin-svelte": "^2.5.0",
-    "svelte": "^3.44.0",
-    "svelte-preprocess": "^4.10.4",
-    "tailwindcss": "^3.0.23"
-  },
-  "type": "module"
+    "@iconify-json/carbon": "^1.1.6",
+    "@iconify-json/logos": "^1.1.6",
+    "@nuxt/content": "^2.0.1",
+    "@unocss/nuxt": "^0.39.3",
+    "@vueuse/core": "^8.7.5",
+    "@vueuse/nuxt": "^8.7.5",
+    "nuxt": "3.0.0-rc.4"
+  }
 }

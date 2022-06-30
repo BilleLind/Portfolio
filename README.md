@@ -1,5 +1,42 @@
-# Portfolio
- 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/46e63f9b-f696-4355-a441-bca4d3d18615/deploy-status)](https://app.netlify.com/sites/billelind/deploys)
+# Nuxt 3 Minimal Starter
 
- # My portfolio Site built using Svelte through the SvelteKit framework.
+Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+
+## Setup
+
+Make sure to install the dependencies:
+
+```bash
+# yarn
+yarn install
+
+# npm
+npm install
+
+# pnpm
+pnpm install --shamefully-hoist
+```
+
+## Development Server
+
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
