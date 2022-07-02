@@ -1,7 +1,15 @@
-# Nuxt 3 Minimal Starter
+# My personal Portfolio Created using Nuxt v3
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+## Features
+- [x] Markdown Blog through Nuxt Content
+  - [ ] Styling for markdown blog, unsure (not tested)
+- 
 
+
+
+
+Technicals
+---
 ## Setup
 
 Make sure to install the dependencies:
