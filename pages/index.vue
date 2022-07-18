@@ -17,9 +17,9 @@ definePageMeta({
 
 
     <section mt-20>
-      <h2 heading boder-2 border-b border-dashed>Tool Box</h2>
+      <h2 heading border-b border-dashed>Tool Box</h2>
 
-      <div grid grid-cols-3 lg:grid-cols-5 m-3 gap-6>
+      <div grid grid-cols-2 mg:grid-cols-3 lg:grid-cols-5 m-3 gap-6 >
         <Icon logo="i-logos-laravel">Laraval</Icon>
         <Icon logo="i-logos-vue">Vue</Icon>
         <Icon logo="i-logos-nuxt-icon">Nuxt</Icon>
@@ -38,9 +38,9 @@ definePageMeta({
 
 
     <section mt-20>
-      <h2 heading border-2 border-b border-dashed>Projects</h2>
+      <h2 heading border-b border-dashed>Projects</h2>
       <div grid grid-cols-2 md:grid-cols-3 m-3 gap-4>
-        
+
       </div>
     </section>
 
