@@ -13,10 +13,10 @@ import { toggleDark } from '@/composables/dark'
 				<button @click="toggleDark()" title="Theme toggle"
 					i-carbon-sun dark:i-carbon-moon hover:opacity-75 text-slate-800 dark:text-yellow></button>
 				<li>
-					<RouterLink to="https://blog.billelind.dev" class="btn flex items-center hover:text-green ">
+					<NuxtLink to="https://blog.billelind.dev" class="btn flex items-center hover:text-green ">
 						<div class="md:i-carbon-book text-purple-700 dark:text-purple-600 mr-1" />
 						Blog
-					</RouterLink>
+					</NuxtLink>
 				</li>
 				<!-- <li>
 					<RouterLink to="/about" class="btn flex items-center hover:text-teal-600"> About</RouterLink>
