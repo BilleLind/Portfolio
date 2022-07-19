@@ -1,9 +1,17 @@
 # My personal Portfolio Created using Nuxt v3
 
 ## Features
+- [x] basic developer website
+- [x] tool box section
+- [ ] Projects section
+- [ ] interests section
+- [ ] listining/reading (or wanting too) section
+- [ ] 
+
+### paused or discontinued Features
 - [x] Markdown Blog through Nuxt Content
   - [ ] Styling for markdown blog, unsure (not tested)
-- 
+ 
 
 
 
