@@ -19,19 +19,34 @@ definePageMeta({
     <section mt-20>
       <h2 heading border-b border-dashed>Tool Box</h2>
 
-      <div grid grid-cols-2 mg:grid-cols-3 lg:grid-cols-5 m-3 gap-6 >
-        <Icon logo="i-logos-laravel">Laraval</Icon>
-        <Icon logo="i-logos-vue">Vue</Icon>
-        <Icon logo="i-logos-nuxt-icon">Nuxt</Icon>
-        <Icon logo="i-logos-fastify-icon">Fastify</Icon>
-        <Icon logo="i-logos-nodejs-icon">Node</Icon>
-        <Icon logo="i-logos-tailwindcss-icon">Tailwindcss</Icon>
+      <div grid grid-cols-2 mg:grid-cols-3 lg:grid-cols-4 m-3 gap-3 lg:gap-6>
         <Icon logo="i-logos-vitejs">Vitejs</Icon>
         <Icon logo="i-logos-git-icon">Git</Icon>
         <Icon logo="i-logos-typescript-icon">Typescript</Icon>
-        <Icon logo="i-logos-unocss">Unocss</Icon>
+      </div>
+      <div  gap-2 ml-3>
+        <h3 border-b border-dashed>Full Stack:</h3>
+        <div grid grid-cols-2 mg:grid-cols-3 lg:grid-cols-4 m-3 gap-3 lg:gap-6>
+          <Icon logo="i-logos-laravel">Laraval</Icon>
+          <Icon logo="i-logos-nuxt-icon">Nuxt</Icon>
+        </div>
+      </div>
+      <div  gap-2 ml-3>
+        <h3 border-b border-dashed>Backend:</h3>
+        <div grid grid-cols-2 mg:grid-cols-3 lg:grid-cols-4 m-3 gap-3 lg:gap-6>
+          <Icon logo="i-logos-fastify-icon">Fastify</Icon>
+          <Icon logo="i-logos-nodejs-icon">Node</Icon>
 
-        <Icon logo="i-logos-react">React</Icon>
+        </div>
+      </div>
+      <div  gap-2 ml-3>
+        <h3 border-b border-dashed>Frontend:</h3>
+        <div grid grid-cols-2 mg:grid-cols-3 lg:grid-cols-4 m-3 gap-3 lg:gap-6>
+          <Icon logo="i-logos-vue">Vue</Icon>
+          <Icon logo="i-logos-tailwindcss-icon">Tailwindcss</Icon>
+          <Icon logo="i-logos-unocss">Unocss</Icon>
+          <Icon logo="i-logos-react">React</Icon>
+        </div>
       </div>
     </section>
 
@@ -40,7 +55,7 @@ definePageMeta({
     <section mt-20>
       <h2 heading border-b border-dashed>Projects</h2>
       <div grid grid-cols-2 md:grid-cols-3 m-3 gap-4>
-
+          
       </div>
     </section>
 
