@@ -18,7 +18,8 @@ export default defineNuxtConfig({
 		icons: { scale: 1.2 },
 		attributify: true,
 		shortcuts: [
-			{'nav-btn': 'p-2 border-2 rounded-lg inline-flex hover:border-accent transition ease-in-out w-full text-ellipsis'}
+			{'nav-btn': 'p-2 border-2 rounded-lg inline-flex hover:border-accent transition ease-in-out w-full text-ellipsis'},
+			{'section': 'max-w-11/12 lg:max-w-9/12  mx-auto'}
 		],
 		theme: {
 			colors: {
@@ -29,6 +30,15 @@ export default defineNuxtConfig({
 				light: '#E0E0E0',
 				accent: '#46d179',
 			},
+			breakpoints:{
+				'xs': '360px',
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
+				'2xl': '1536px'
+			}
 		},
+		
 	},
 })
