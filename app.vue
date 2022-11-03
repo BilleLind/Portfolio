@@ -10,5 +10,8 @@
   html {
     color-scheme: dark;
   }
+  body {
+    height: 100vh;
+  }
 }
 </style>
