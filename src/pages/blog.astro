@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro'
+const allPosts = await Astro.glob('../pages/posts/*.md');
+const pageTitle = 'Blog by me'
+---
+
+<Base pageTitle={pageTitle}>
+	<p>This is where I will post about my journey learning Astro.</p>
+
+	<ul>
+    {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+	</ul>
+</Base>
