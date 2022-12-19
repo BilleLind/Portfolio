@@ -9,39 +9,73 @@ const pageTitle = 'Index for portfolio'
 	<section class="text-center mt-20">
 		<h2 class="text-2xl font-bold">Hello, I'm Bille</h2>
 
-		<p class="text-lg sm-fade mt-10">I'm a developer passionated about:</p>
-		<!-- <ul class="list-disc list-inside marker:text-accent">
-			<li>Learning</li>
-			<li>Improving</li>
-			<ul class="list-disc ml-5 list-inside marker:text-accent">
-				<p class="border-b-2 border-accent w-fit">& Creating:</p>
-				<li>Sustainability</li>
-				<li>Accessibility</li>
-			</ul>
-		</ul> -->
-		<div class="grid sm:w-1/3 mt-6 mx-auto gap-6 content-around grid-cols-2">
-			<a href="#learning" class="hover:border-accent focus:border-accent" title="Explore what tech i am curretly exploring" aria-label="Explore what tech i am curretly exploring">Learning</a>
-			<a href="#improvements" class="hover:border-accent focus:border-accent" title="Check out how i am Improving myself!" aria-label="Check out how i am Improving myself!">Improving</a>
-			<a href="" class="no-underline hover:border-accent focus:border-accent" title="" aria-label="">Sustainability</a>
-			<a href="" class="no-underline hover:border-accent focus:border-accent" title="" aria-label="">Accessibility</a>
+		<p class="text-lg text-faded">I'm a developer passionated about:</p>
+		<div class="grid intro text-align mt-6 mx-auto gap-6 content-around grid-cols-2 text-lg">
+			<a href="#learning" class="hover:border-accent focus:border-accent link" title="Explore what tech i am curretly exploring" aria-label="Explore what tech i am curretly exploring">Learning</a>
+			<a href="#improvements" class="link" title="Check out how i am Improving myself!" aria-label="Check out how i am Improving myself!">Improving</a>
+			<a href="" class="link" title="" aria-label="">Sustainability</a>
+			<a href="" class="link" title="" aria-label="">Accessibility</a>
 		</div>
-		<p class="sm-fade mt-4">And honestly i like to develope Cool stuff.</p>
+		<p class="text-faded mt-4">...Honestly i like to develope Cool stuff.</p>
 	</section>
-	<section class="mt-40 lg:w-2/3 mx-auto" id="projects">
-		<h2 class="text-xl font-bold underline underline-offset-4">Projects</h2>
-		<div class="grid grid-cols-3">
-			<ProjectCard image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
+	<section class="my-40 max-w-[95%] mx-auto" id="projects">
+		<h2 class="text-xl font-bold underline underline-offset-4 mb-4">Projects</h2>
+		<div class="projects-con gap-6">
+			<ProjectCard
+				image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+				title="1"
+				description="descr 1"
+				link="#"
+				tags={['one', 'two', 'three']}
+			/>
+			<ProjectCard
+				image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+				title="2"
+				description="descr 2"
+				link="#"
+				tags={['one', 'two', 'three']}
+			/>
 		</div>
 	</section>
 </Base>
 
 <style>
 	.greeting {
-		max-width: 80%;
 		margin-inline: auto;
 		margin-top: 10%;
 	}
-	.sm-fade {
-		opacity: 0.8;
+	.intro {
+	}
+	.projects-con {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		margin-inline: auto;
+	}
+
+	@media (min-width: 420px) {
+		/* .intro {
+			width: 33%;
+		} */
+	}
+
+	@media (min-width: 500px) {
+		.projects-con {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		.projects-con < a:nth-last-child(odd) {
+			column-span: 2;
+		}
+		.intro {
+			width: 66%;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.intro {
+			width: 33%;
+		}
+		.projects-con {
+			gap: 3rem;
+		}
 	}
 </style>

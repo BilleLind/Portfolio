@@ -1,20 +1,55 @@
 ---
-const { image } = Astro.props
+interface Props {
+	image: string
+	link: string
+	title: string
+	description: string
+	tags: string[]
+}
+const { image, link, title, description, tags } = Astro.props
 ---
 
-<article class="border-2 rounded-lg shadow-xl">
-	<img src={image} alt="" class="w-full object-cover" />
-	<!-- <div class="">
-		<h3>Project title</h3>
-		<ul class="list-none flex">
-			<li>Tag 1</li>
-			<li>Tag 2</li>
-			<li>Tag 3</li>
-			<li>Tag 4</li>
-		</ul>
-		<p>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. In odit error id sapiente officia. Voluptatibus nisi amet ipsam assumenda, fuga in? Mollitia accusamus, dolorum laudantium natus omnis
-			consequatur molestias iusto.
+<a class="card" href={link} title={`Go to ${title}`}>
+	<img src={image} alt="" class="" />
+	<div class="p-4">
+		<h3 class="text-lg">{title}</h3>
+		<p class="text-faded">
+			{description}
 		</p>
-	</div> -->
-</article>
+		<ul class="flex gap-x-6 tags">{tags.map((tag: string) => <li>{tag}</li>)}</ul>
+	</div>
+</a>
+
+<style>
+	.tags {
+		margin-top: 0.5rem;
+	}
+	a {
+		border-radius: 0.5rem;
+		box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+		border: 2px solid;
+		cursor: pointer;
+		transition: all;
+		transition-duration: 300ms;
+		transition-timing-function: ease-in;
+	}
+	a:hover {
+		border-color: hsl(var(--dark-text));
+	}
+	a:hover h3 {
+		color: hsl(var(--accent));
+	}
+	img {
+		width: 100%;
+		object-fit: cover;
+		border-radius: 0.5rem 0.5rem 0rem 0rem;
+		aspect-ratio: 1/1;
+		max-height: 10rem;
+	}
+
+	@media (min-width: 748px) {
+		img {
+			max-height: 14rem;
+		}
+	}
+</style>
