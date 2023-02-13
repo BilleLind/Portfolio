@@ -22,19 +22,41 @@ const pageTitle = 'Index for portfolio'
 		<h2 class="text-xl font-bold underline underline-offset mb-4">Projects</h2>
 		<div class="projects-con gap-6">
 			<ProjectCard
-				image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-				title="1"
-				description="descr 1"
-				link="#"
-				tags={['one', 'two', 'three']}
+				finished={true}
+				image="/images/zealand-connect.jpg"
+				title="Zealand Connect"
+				description="Zealand Connect was a ~2 month long group project with the aim of creating an intern/ship platform for our entire School. Split up into 4 Scrum teams, we got to experience working agile across teams with direct contact to the users for feedback."
+				link="https://praktikindex.zealand.dk"
+				tags={['Express', 'Scrum', 'HBS', 'Docker']}
 			/>
 			<ProjectCard
-				image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-				title="2"
-				description="descr 2"
+			finished={true}
+				image="/images/lagalt.jpg"
+				title="Lagalt"
+				description="Lagalt is a project collaboration Web Application built using React.js and Spring Boot with Keycloak as the indentity manager."
 				link="#"
-				tags={['one', 'two', 'three']}
+				tags={['Spring Boot', 'React.js', 'Vite.js', 'Keycloak', 'OAuth']}
 			/>
+			<ProjectCard
+			finished={true}
+				image="/images/advice-generator.jpg"
+				title="Advice Generator"
+				description="A Frontend Mentor Project, where i focused on utilizing Vanilla Css and Flexbox."
+				link="https://billelind.github.io/frontend-mentor-challenges/advice-generator/"
+				tags={['Javascript', 'Flexbox']}
+			/>
+
+			<!-- 
+				<ProjectCard
+			finished={false}
+				image=""
+				title=""
+				description=""
+				link="#"
+				tags={['one',]}
+			/>
+
+			 -->
 		</div>
 	</section>
 
