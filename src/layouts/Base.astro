@@ -1,0 +1,299 @@
+---
+import Footer from '../components/Footer.astro'
+import Navigation from '../components/Navigation.astro'
+
+const { pageTitle } = Astro.props
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" /><!-- 
+		<link rel="stylesheet" href="/styles/global.css" /> -->
+		<title>{pageTitle}</title>
+	</head>
+	<body class="mx-4 lg:max-w-[90%] lg:mx-auto selection:text-accent">
+		<Navigation />
+		<main class="">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+	* {
+		margin: 0;
+	}
+	html,
+	body {
+		height: 100%;
+		width: 100%;
+	}
+
+	body {
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+	}
+	img,
+	picture,
+	video,
+	canvas,
+	svg {
+		display: block;
+		max-width: 100%;
+	}
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+	a {
+		color: inherit;
+		text-decoration: inherit;
+	}
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+		font-size: inherit;
+		font-weight: inherit;
+	}
+
+	ol,
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	#root,
+	#__next {
+		isolation: isolate;
+	}
+
+	/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+	@media (prefers-reduced-motion: reduce) {
+		html:focus-within {
+			scroll-behavior: auto;
+		}
+
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+
+	:root {
+		--dark: 0deg, 0%, 8%;
+		--dark-card: 0deg, 0%, 15%;
+		--dark-text: 0deg, 0%, 99%;
+		--light: 0deg, 0%, 88%;
+		--accent: 137deg, 100%, 56%;
+		--blue: #0e141b;
+		--golden: #f4d35e;
+		--2xs: clamp(0.69rem, calc(0.65rem + 0.2vw), 0.84rem);
+		--xs: clamp(0.83rem, calc(0.77rem + 0.29vw), 1.05rem);
+		--base: clamp(1rem, calc(0.92rem + 0.42vw), 1.31rem);
+		--lg: clamp(1.2rem, calc(1.08rem + 0.6vw), 1.64rem);
+		--xl: clamp(1.44rem, calc(1.27rem + 0.83vw), 2.05rem);
+		--2xl: clamp(1.73rem, calc(1.5rem + 1.13vw), 2.56rem);
+		--3xl: clamp(2.07rem, calc(1.77rem + 1.53vw), 3.2rem);
+		--4xl: clamp(2.49rem, calc(2.08rem + 2.06vw), 4.01rem);
+		font-size: var(--base);
+	}
+
+	.text-xs {
+		font-size: var(--xs);
+	}
+	.text-2xs {
+		font-size: var(--2xs);
+	}
+	.text {
+		font-size: var(--base);
+	}
+	.text-lg {
+		font-size: var(--lg);
+	}
+	.text-xl {
+		font-size: var(--xl);
+		line-height: 110%;
+	}
+	.text-2xl {
+		font-size: var(--2xl);
+	}
+	.text-3xl {
+		font-size: var(--3xl);
+	}
+	.text-4xl {
+		font-size: var(--4xl);
+	}
+
+	* {
+		border-color: hsl(var(--dark));
+	}
+
+	body {
+		color-scheme: dark light;
+		background-color: hsl(var(--dark));
+		color: hsl(var(--dark-text));
+		padding-inline: 1rem;
+	}
+	.card {
+		background-color: hsl(var(--dark-card));
+		border-color: hsl(var(--dark-card));
+	}
+
+	@media (prefers-color-scheme: light) {
+		body {
+			color-scheme: light;
+			background-color: hsl(var(--light));
+			color: hsl(var(--dark));
+		}
+	}
+
+	.link {
+		text-decoration: underline;
+		transition-property: all; /*  color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter */
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 250ms;
+	}
+	.link:hover {
+		color: hsl(var(--accent));
+		transform: scale(1.1);
+	}
+	.link:focus {
+		color: hsl(var(--accent));
+		transform: scale(1.1);
+		outline: 2px solid transparent;
+		outline-offset: 2px;
+	}
+
+	/** Utilities **/
+	.flex {
+		display: flex;
+	}
+	.grid {
+		display: grid;
+	}
+	.items-center {
+		align-items: center;
+	}
+	.justify-between {
+		justify-content: space-between;
+	}
+	.content-around {
+		align-content: space-around;
+	}
+
+	.max-content {
+		width: max-content;
+	}
+
+	.grid-cols-2 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	
+	/* Text */
+	.font-bold {
+		font-weight: 700;
+	}
+	.text-faded {
+		opacity: 0.7;
+	}
+
+	.text-center {
+		text-align: center;
+	}
+	.underline {
+		text-decoration: underline;
+	}
+	.underline-offset {
+		text-underline-offset: 4px;
+	}
+	/* Margins */
+
+	.mx-auto {
+		margin-inline: auto;
+	}
+	.mt-4 {
+		margin-top: 1rem;
+	}
+	.mt-6 {
+		margin-top: 1.5rem;
+	}
+	.mt-10 {
+		margin-top: 2.5rem;
+	}
+	.mt-20 {
+		margin-top: 5rem;
+	}
+	.mt-40 {
+		margin-top: 10rem;
+	}
+	.my-8 {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	.my-40 {
+		margin-top: 10rem;
+		margin-bottom: 10rem;
+	}
+	.mb-4 {
+		margin-bottom: 1rem;
+	}
+	.mr-2 {
+		margin-right: 0.25rem;
+	}
+	.gap-4 {
+		gap: 1rem;
+	}
+	.gap-6 {
+		gap: 1.5rem;
+	}
+	.gap-x-6 {
+		column-gap: 1.5rem;
+	}
+	.h-4 {
+		height: 1rem;
+	}
+	.w-4 {
+		width: 1rem;
+	}
+	.h-6 {
+		height: 1.5rem;
+	}
+	.w-6 {
+		width: 1.5rem;
+	}
+	.p-4 {
+		padding: 1rem;
+	}
+	::selection {
+		color: hsl(var(--accent));
+		background-color: inherit;
+	}
+
+	@media (min-width: 1024px) {
+		body {
+			margin-inline: auto;
+			max-width: 90%;
+			padding-inline: 0rem;
+		}
+	}
+</style>

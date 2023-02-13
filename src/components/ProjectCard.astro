@@ -1,0 +1,78 @@
+---
+interface Props {
+	image: string
+	link: string
+	title: string
+	description: string
+	tags: string[]
+	finished: boolean
+}
+const { image, link, title, description, tags, finished } = Astro.props
+---
+
+<a class="card" href={link} title={`Go to ${title}`}>
+	{!finished && <p class="progress-sticker">In progress</p>}
+	<img src={image} alt="" class="" />
+	<div class="p-4 card-content flex" >
+		<h3 class="text-lg">{title}</h3>
+		<p class="text-faded" style="margin-bottom: auto;">
+			{description}
+		</p>
+		<ul class="flex gap-x-6 tags">{tags.map((tag: string) => <li>{tag}</li>)}</ul>
+	</div>
+</a>
+
+<style>
+	.tags {
+		margin-top: 0.5rem;
+		align-items: center;
+		justify-self: end;
+		flex-wrap: wrap;
+	}
+	.card-content {
+		height: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	a {
+		border-radius: 0.5rem;
+		box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+		border: 2px solid;
+		cursor: pointer;
+		transition: all;
+		transition-duration: 300ms;
+		transition-timing-function: ease-in;
+		height: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+	a:hover {
+		border-color: hsl(var(--dark-text));
+	}
+	a:hover h3 {
+		color: hsl(var(--accent));
+	}
+	.progress-sticker {
+		position: absolute;
+		text-align: end;
+		padding: 0.25rem 0.5rem;
+		border-radius: 0.4rem 0 1rem 0;
+		color: hsl(var(--accent));
+		background-color: hsl(var(--dark-card));
+	}
+
+	img {
+		width: 100%;
+		object-fit: cover;
+		border-radius: 0.5rem 0.5rem 0rem 0rem;
+		aspect-ratio: 1/1;
+		max-height: 10rem;
+	}
+
+	@media (min-width: 748px) {
+		img {
+			max-height: 14rem;
+		}
+	}
+</style>

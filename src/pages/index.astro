@@ -1,0 +1,198 @@
+---
+import Base from '../layouts/Base.astro'
+import ProjectCard from '../components/ProjectCard.astro'
+import Icon from 'astro-icon'
+const pageTitle = 'Index for portfolio'
+---
+
+<Base pageTitle={pageTitle}>
+	<section class="text-center mt-20">
+		<h2 class="text-2xl font-bold">Hello, I'm Bille</h2>
+
+		<p class="text-lg text-faded">I'm a developer passionated about:</p>
+		<div class="grid intro text-align mt-6 mx-auto gap-6 content-around grid-cols-2 text-lg">
+			<a href="#learning" class="hover:border-accent focus:border-accent link" title="Explore what tech i am curretly exploring" aria-label="Explore what tech i am curretly exploring">Learning</a>
+			<a href="#improvements" class="link" title="Check out how i am Improving myself!" aria-label="Check out how i am Improving myself!">Improving</a>
+			<a href="" class="link" title="" aria-label="">Sustainability</a>
+			<a href="" class="link" title="" aria-label="">Accessibility</a>
+		</div>
+		<p class="text-faded mt-4">...Honestly i like to develope Cool stuff.</p>
+	</section>
+	<section class="my-40 mx-auto" id="projects">
+		<h2 class="text-xl font-bold underline underline-offset mb-4">Projects</h2>
+		<div class="projects-con gap-6">
+			<ProjectCard
+				finished={true}
+				image="/images/zealand-connect.jpg"
+				title="Zealand Connect"
+				description="Zealand Connect was a ~2 month long group project with the aim of creating an intern/ship platform for our entire School. Split up into 4 Scrum teams, we got to experience working agile across teams with direct contact to the users for feedback."
+				link="https://praktikindex.zealand.dk"
+				tags={['Express', 'Scrum', 'HBS', 'Docker']}
+			/>
+			<ProjectCard
+			finished={true}
+				image="/images/lagalt.jpg"
+				title="Lagalt"
+				description="Lagalt is a project collaboration Web Application built using React.js and Spring Boot with Keycloak as the indentity manager."
+				link="#"
+				tags={['Spring Boot', 'React.js', 'Vite.js', 'Keycloak', 'OAuth']}
+			/>
+			<ProjectCard
+			finished={true}
+				image="/images/advice-generator.jpg"
+				title="Advice Generator"
+				description="A Frontend Mentor Project, where i focused on utilizing Vanilla Css and Flexbox."
+				link="https://billelind.github.io/frontend-mentor-challenges/advice-generator/"
+				tags={['Javascript', 'Flexbox']}
+			/>
+
+			<!-- 
+				<ProjectCard
+			finished={false}
+				image=""
+				title=""
+				description=""
+				link="#"
+				tags={['one',]}
+			/>
+
+			 -->
+		</div>
+	</section>
+
+	<section>
+		<h2 class="text-xl font-bold underline underline-offset mb-4">How I Work</h2>
+		<p class="text-faded">
+			Having had an focus on working with both Front and Back-end, some of the time i chose to work with Javascript while exploring Typescript through Fastify as the Backend Server
+		</p>
+		<div class="grid fe-be gap-4">
+			<div class="">
+				<h4 class="text-lg underline my-8">Frontend</h4>
+				<div class="stacks">
+					<a href="https://reactjs.org/" title="React's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center">
+						<Icon name="logo-react" optimize="true" class="h-6 w-6 mr-2" /> React</a
+					>
+					<a href="https://svelte.dev/" title="Svelte's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
+						><Icon name="logo-svelte" optimize="true" class="h-6 w-6 mr-2" /> Svelte</a
+					>
+					<a href="https://vuejs.org/" title="Vue's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"><Icon name="logo-vue" optimize="true" class="h-6 w-6 mr-2" /> Vue</a
+					>
+					<a href="https://angular.io/" title="Angular's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
+						><Icon name="logo-angular" optimize="true" class="h-6 w-6 mr-2" /> Angular</a
+					>
+					<a href="https://typescriptlang.org/" title="Typescript's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
+						><Icon name="logo-typescript" optimize="true" class="h-6 w-6 mr-2" />Typescript </a
+					>
+
+					<!-- <a href="https://" title="'s Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
+						><Icon name="logo-" optimize="true" class="h-6 w-6 mr-2" /> </a
+					> -->
+				</div>
+			</div>
+			<div>
+				<h4 class="text-lg underline my-8">Backend</h4>
+				<div class="stacks">
+					<a href="https://laravel.com/" title="Laravel's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
+						><Icon name="logo-laravel" optimize="true" class="h-6 w-6 mr-2" />Laravel </a
+					>
+					<a href="https://nodejs.org/" title="Nodejs's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
+						><Icon name="logo-nodejs" optimize="true" class="h-6 w-6 mr-2" />Nodejs </a
+					>
+					<a href="https://spring.io/" title="Spring's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
+						><Icon name="logo-spring" optimize="true" class="h-6 w-6 mr-2" />Spring </a
+					>
+					<a href="https://fastify.io/" title="Fastify's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
+						><Icon name="logo-fastify" optimize="true" class="h-6 w-6 mr-2" />Fastify </a
+					>
+				</div>
+			</div>
+		</div>
+	</section>
+</Base>
+
+<style>
+	.greeting {
+		margin-inline: auto;
+		margin-top: 10%;
+	}
+	.intro {
+	}
+	.projects-con {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		margin-inline: auto;
+	}
+
+	/* .fe-be {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	} */
+	.fe-be a {
+		border-radius: 0.5rem;
+		border: 2px solid hsl(var(--dark-card));
+		padding: 0.5rem 0.5rem;
+		transition: ease-in-out;
+		transition-duration: 400ms;
+	}
+	.fe-be a:hover {
+		border-color: hsl(var(--accent));
+	}
+
+	.stacks {
+		display: grid;
+		gap: 1rem 0.5rem;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	@media (min-width: 420px) {
+		/* .intro {
+			width: 33%;
+		} */
+		/* .fe-be .stacks {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		} */
+	}
+	@media (min-width: 500px) {
+		.projects-con {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		.projects-con < a:nth-last-child(odd) {
+			column-span: 2;
+		}
+		.intro {
+			width: 66%;
+		}
+	}
+
+	@media (min-width: 748px) {
+		.fe-be {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			border-right-width: 0px;
+			border-left-width: 1px;
+			border-color: red;
+		}
+		.stacks {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.intro {
+			width: 33%;
+		}
+		.projects-con {
+			gap: 3rem;
+		}
+		.fe-be {
+			gap: 4rem;
+		}
+		 .stacks {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
+	}
+
+	/* @media (min-width: 1400px) {
+		.fe-be .stacks {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
+	} */
+</style>

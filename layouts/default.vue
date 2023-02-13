@@ -1,4 +1,0 @@
-<template>
-    <Navigation/>
-    <slot/>
-</template>
