@@ -5,13 +5,13 @@ interface Props {
 	title: string
 	description: string
 	tags: string[]
-	finished: boolean
+	state: 'finished' |'in progess' | 'planning'
 }
-const { image, link, title, description, tags, finished } = Astro.props
+const { image, link, title, description, tags, state } = Astro.props
 ---
 
 <a class="card" href={link} title={`Go to ${title}`}>
-	{!finished && <p class="progress-sticker">In progress</p>}
+	{state !== 'finished' && <p class="progress-sticker">In progress</p>}
 	<img src={image} alt="" class="" />
 	<div class="p-4 card-content flex" >
 		<h3 class="text-lg">{title}</h3>

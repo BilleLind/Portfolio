@@ -22,7 +22,7 @@ const pageTitle = 'Index for portfolio'
 		<h2 class="text-xl font-bold underline underline-offset mb-4">Projects</h2>
 		<div class="projects-con gap-6">
 			<ProjectCard
-				finished={true}
+			state='finished'
 				image="/images/zealand-connect.jpg"
 				title="Zealand Connect"
 				description="Zealand Connect was a ~2 month long group project with the aim of creating an intern/ship platform for our entire School. Split up into 4 Scrum teams, we got to experience working agile across teams with direct contact to the users for feedback."
@@ -30,7 +30,7 @@ const pageTitle = 'Index for portfolio'
 				tags={['Express', 'Scrum', 'HBS', 'Docker']}
 			/>
 			<ProjectCard
-			finished={true}
+			state='finished'
 				image="/images/lagalt.jpg"
 				title="Lagalt"
 				description="Lagalt is a project collaboration Web Application built using React.js and Spring Boot with Keycloak as the indentity manager."
@@ -38,7 +38,7 @@ const pageTitle = 'Index for portfolio'
 				tags={['Spring Boot', 'React.js', 'Vite.js', 'Keycloak', 'OAuth']}
 			/>
 			<ProjectCard
-			finished={true}
+			state='finished'
 				image="/images/advice-generator.jpg"
 				title="Advice Generator"
 				description="A Frontend Mentor Project, where i focused on utilizing Vanilla Css and Flexbox."
@@ -46,12 +46,15 @@ const pageTitle = 'Index for portfolio'
 				tags={['Javascript', 'Flexbox']}
 			/>
 			<ProjectCard
-				finished={true}
-				image=""
+			state='finished'
+				image="/images/ecommerce-product-page.png"
 				title="Ecommrec Product Page"
 				description="A Frontend Mentor Project, Focused on using React with Typescript with Primarily using Tailwindccs for styling"
-				link="https://billelind-ecommerce-product-page.netlify.app/"
+				link="https://ecommerce-product-page.billelind.dev/"
 				tags={['React', 'Typescript', 'Tailwindcss']}
+			/>
+			<ProjectCard
+			state="in progess" title="EVE: WH Anomaly and Sinature overview" image="/images/placeholder.jpg" description="A Website for helping WH players better determine if a WH is worth setting up, starting small with a bunch of potential for expansion later on." link="" tags={['EVE Online','TBD']}
 			/>
 
 			<!-- 
