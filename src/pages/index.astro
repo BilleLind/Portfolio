@@ -22,7 +22,7 @@ const pageTitle = "Anders' Portfolio"
 		<h2 class="text-xl font-bold underline underline-offset mb-4">Projects</h2>
 		<div class="projects-con gap-6">
 			<ProjectCard
-			state='finished'
+				state="finished"
 				image="/images/zealand-connect.jpg"
 				title="Zealand Connect"
 				description="Zealand Connect was a ~2 month long group project with the aim of creating an intern/ship platform for our entire School. Split up into 4 Scrum teams, we got to experience working agile across teams with direct contact to the users for feedback."
@@ -30,7 +30,7 @@ const pageTitle = "Anders' Portfolio"
 				tags={['Express', 'Scrum', 'HBS', 'Docker']}
 			/>
 			<ProjectCard
-			state='finished'
+				state="finished"
 				image="/images/lagalt.jpg"
 				title="Lagalt"
 				description="Lagalt is a project collaboration Web Application built using React.js and Spring Boot with Keycloak as the indentity manager."
@@ -38,7 +38,7 @@ const pageTitle = "Anders' Portfolio"
 				tags={['Spring Boot', 'React.js', 'Vite.js', 'Keycloak', 'OAuth']}
 			/>
 			<ProjectCard
-			state='finished'
+				state="finished"
 				image="/images/advice-generator.jpg"
 				title="Advice Generator"
 				description="A Frontend Mentor Project, where i focused on utilizing Vanilla Css and Flexbox."
@@ -46,7 +46,7 @@ const pageTitle = "Anders' Portfolio"
 				tags={['Javascript', 'Flexbox']}
 			/>
 			<ProjectCard
-			state='finished'
+				state="finished"
 				image="/images/ecommerce-product-page.png"
 				title="Ecommrec Product Page"
 				description="A Frontend Mentor Project, Focused on using React with Typescript with Primarily using Tailwindccs for styling"
@@ -54,7 +54,20 @@ const pageTitle = "Anders' Portfolio"
 				tags={['React', 'Typescript', 'Tailwindcss']}
 			/>
 			<ProjectCard
-			state="in progess" title="EVE: WH Anomaly and Sinature overview" image="/images/placeholder.jpg" description="A Website for helping WH players better determine if a WH is worth setting up, starting small with a bunch of potential for expansion later on." link="" tags={['EVE Online','TBD']}
+				state="in progess"
+				title="EVE: WH Anomaly and Sinature overview"
+				image="/images/placeholder.jpg"
+				description="A Website for helping WH players better determine if a WH is worth setting up, starting small with a bunch of potential for expansion later on."
+				link=""
+				tags={['EVE Online', 'TBD']}
+			/>
+			<ProjectCard
+				state="finished"
+				image="/images/news-homepage.png"
+				title="News Homepage"
+				description="A Frontend Mentor Project, Created with Vue while trying to keep the CSS simple"
+				link="https://news-homepage.billelind.dev/"
+				tags={['Vue', 'CSS']}
 			/>
 
 			<!-- 
@@ -92,8 +105,8 @@ const pageTitle = "Anders' Portfolio"
 						><Icon name="logo-angular" optimize="true" class="h-6 w-6 mr-2" /> Angular</a
 					>
 					<a href="https://typescriptlang.org/" title="Typescript's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
-						><Icon name="logo-typescript" optimize="true" class="h-6 w-6 mr-2" />Typescript </a
-					>
+						><Icon name="logo-typescript" optimize="true" class="h-6 w-6 mr-2" />Typescript
+					</a>
 
 					<!-- <a href="https://" title="'s Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
 						><Icon name="logo-" optimize="true" class="h-6 w-6 mr-2" /> </a
@@ -104,17 +117,17 @@ const pageTitle = "Anders' Portfolio"
 				<h4 class="text-lg underline my-8">Backend</h4>
 				<div class="stacks">
 					<a href="https://laravel.com/" title="Laravel's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
-						><Icon name="logo-laravel" optimize="true" class="h-6 w-6 mr-2" />Laravel </a
-					>
+						><Icon name="logo-laravel" optimize="true" class="h-6 w-6 mr-2" />Laravel
+					</a>
 					<a href="https://nodejs.org/" title="Nodejs's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
-						><Icon name="logo-nodejs" optimize="true" class="h-6 w-6 mr-2" />Nodejs </a
-					>
+						><Icon name="logo-nodejs" optimize="true" class="h-6 w-6 mr-2" />Nodejs
+					</a>
 					<a href="https://spring.io/" title="Spring's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
-						><Icon name="logo-spring" optimize="true" class="h-6 w-6 mr-2" />Spring </a
-					>
+						><Icon name="logo-spring" optimize="true" class="h-6 w-6 mr-2" />Spring
+					</a>
 					<a href="https://fastify.io/" title="Fastify's Website" referrerpolicy="no-referrer" target="_blank" class="flex items-center"
-						><Icon name="logo-fastify" optimize="true" class="h-6 w-6 mr-2" />Fastify </a
-					>
+						><Icon name="logo-fastify" optimize="true" class="h-6 w-6 mr-2" />Fastify
+					</a>
 				</div>
 			</div>
 		</div>
@@ -196,7 +209,7 @@ const pageTitle = "Anders' Portfolio"
 		.fe-be {
 			gap: 4rem;
 		}
-		 .stacks {
+		.stacks {
 			grid-template-columns: repeat(4, minmax(0, 1fr));
 		}
 	}
