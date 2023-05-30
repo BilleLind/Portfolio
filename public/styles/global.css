@@ -41,7 +41,8 @@ h6 {
 	font-weight: inherit;
 }
 
-ol, ul {
+ol,
+ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -125,11 +126,18 @@ body {
 	background-color: hsl(var(--dark-card));
 }
 
+.icon-dark-white {
+	fill: hsl(var(--dark-text));
+}
+
 @media (prefers-color-scheme: light) {
 	body {
 		color-scheme: light;
 		background-color: hsl(var(--light));
 		color: hsl(var(--dark));
+	}
+	.icon-dark-white {
+		fill: hsl(var(--light));
 	}
 }
 
@@ -156,10 +164,10 @@ link:focus {
 	display: flex;
 }
 .items-center {
-  align-items: center;
+	align-items: center;
 }
 .items-center {
-  align-items: center;
+	align-items: center;
 }
 .font-bold {
 	font-weight: bold;
