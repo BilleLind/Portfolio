@@ -83,17 +83,25 @@ const pageTitle = "Anders' Portfolio"
 			 -->
 		</div>
 	</section>
-	<section id="learning" class="my-40">
+	<section id="learning" class="my-40 learning">
 		<h2 class="text-xl font-bold underline underline-offset mb-4">Current Focus</h2>
-		<div class="flex">
+		<div>
 			<article>
-				<h2>.NET and Angular</h2>
+				<h2>.NET</h2>
 				<p>
-					After pondering which direction i should take, i ended up choosing to go with .NET because of its performance, popularity and the Extensive Packages that comes with it, while still wanting
-					to keep a focus on Typescript on the Frontend i, initially have chosen to go with Angular.
-					
-
+					For a long while i have been meaning to develop a Picture focused social site, with the aims of getting more accustomed to the diffuculties surrounding image storage and its general
+					performance.
 				</p>
+			</article>
+
+			<article>
+				<h2>Python</h2>
+				<p>Currently taking a Python Cerfification, some of it being a refresher of the basics and the rest going into more <u>advanced</u> parts along a introduction to <u>Machine Learning</u>.</p>
+			</article>
+
+			<article>
+				<h2>Frontend Mentor Projects</h2>
+				<p>I aim to have a Frontend Mentor project i devote time to any given week, training with different stacks while strengthen my CSS knowledge. Mostly focused on using Vue and React.</p>
 			</article>
 		</div>
 	</section>
@@ -165,6 +173,30 @@ const pageTitle = "Anders' Portfolio"
 		margin-inline: auto;
 	}
 
+	.learning > div {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		margin-inline: auto;
+		gap: 1rem;
+	}
+	.learning > div > article > p {
+		border: 1px solid hsl(var(--dark-text));
+
+		border-top: 0;
+		padding: 0.25rem;
+		border-radius: 0 0 0.25rem 0.25rem;
+	}
+	.learning > div > article:hover > p {
+		border-color: hsl(var(--accent));
+	}
+	.learning > div > article > h2 {
+		text-decoration: underline;
+		font-weight: bold;
+		padding: 0.25rem;
+	}
+	.learning > div > article:hover > h2 {
+		text-decoration-color: hsl(var(--accent));
+	}
 	/* .fe-be {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 	} */
@@ -203,6 +235,9 @@ const pageTitle = "Anders' Portfolio"
 		.intro {
 			width: 66%;
 		}
+		.learning > div {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
 	}
 
 	@media (min-width: 748px) {
@@ -229,6 +264,9 @@ const pageTitle = "Anders' Portfolio"
 		}
 		.stacks {
 			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
+		.learning > div {
+			gap: 3rem;
 		}
 	}
 
