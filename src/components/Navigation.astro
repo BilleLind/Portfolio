@@ -1,7 +1,23 @@
+---
+import Icon from 'astro-icon'
+---
+
 <header class="flex items-center justify-between py-6">
 	<a href="/" class="link">BilleLind</a>
 	<nav class="flex gap-x-2">
-		<!-- <a href="/blog" class="link">Writings</a> -->
+		<a href="mailto:anders.bille.lind@gmail.com" title="My Email" aria-label="anders.bille.lind@gmail.com" referrerpolicy="no-referrer" target="_blank">
+			<Icon name="email" optimize="true" class="h-6 w-6 mr-2" />
+		</a>
+		<a href="https://www.linkedin.com/in/anders-bille-lind/" title="My linkedIn Profile" aria-label="linkedIn" referrerpolicy="no-referrer" target="_blank">
+			<Icon name="linkedin" optimize="true" class="h-6 w-6 mr-2" />
+		</a>
+		<a href="https://github.com/billelind" title="My Github Repository" aria-label="Github" referrerpolicy="no-referrer" target="_blank">
+			<Icon name="github" optimize="true" class="h-6 w-6 mr-2" />
+		</a>
+		<a href="https://gitlab.com/BilleLind" title="My Gitlab Repository" aria-label="Gitlab" referrerpolicy="no-referrer" target="_blank">
+			<Icon name="gitlab" optimize="true" class="h-6 w-6 mr-2" />
+		</a>
+		<!-- <a href=" blog" class="link">Writings</Icon> -->
 		<!-- <a href="/about" class="link">About</a> -->
 		<!-- Dark/light mode? -->
 	</nav>
@@ -14,5 +30,15 @@
 	}
 	nav {
 		column-gap: 0.5rem;
+	}
+	svg {
+		text-decoration: underline;
+		transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 250ms;
+	}
+	svg:hover {
+		fill: hsl(var(--accent));
+		transform: scale(1.1);
 	}
 </style>

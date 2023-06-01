@@ -148,11 +148,11 @@ body {
 	transition-duration: 250ms;
 }
 link:hover {
-	color: var(--accent);
+	color: hsl(var(--accent));
 	transform: scale(1.1);
 }
 link:focus {
-	color: var(--accent);
+	color: hsl(var(--accent));
 	transform: scale(1.1);
 	outline: 2px solid transparent;
 	outline-offset: 2px;
