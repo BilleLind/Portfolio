@@ -74,24 +74,25 @@ ul {
 	--dark-card: 0deg, 0%, 15%;
 	--dark-text: 0deg, 0%, 99%;
 	--light: 0deg, 0%, 88%;
-	--accent: #46d179;
+	--accent:142, 60%, 55%;
+	--accent-dark: 142, 67%, 34%;
 	--blue: #0e141b;
 	--golden: #f4d35e;
-	--2xs: clamp(0.69rem, calc(0.65rem + 0.2vw), 0.84rem);
+	--xxs: clamp(0.69rem, calc(0.65rem + 0.2vw), 0.84rem);
 	--xs: clamp(0.83rem, calc(0.77rem + 0.29vw), 1.05rem);
 	--base: clamp(1rem, calc(0.92rem + 0.42vw), 1.31rem);
 	--lg: clamp(1.2rem, calc(1.08rem + 0.6vw), 1.64rem);
 	--xl: clamp(1.44rem, calc(1.27rem + 0.83vw), 2.05rem);
-	--2xl: clamp(1.73rem, calc(1.5rem + 1.13vw), 2.56rem);
-	--3xl: clamp(2.07rem, calc(1.77rem + 1.53vw), 3.2rem);
-	--4xl: clamp(2.49rem, calc(2.08rem + 2.06vw), 4.01rem);
+	--xxl: clamp(1.73rem, calc(1.5rem + 1.13vw), 2.56rem);
+	--xxxl: clamp(2.07rem, calc(1.77rem + 1.53vw), 3.2rem);
+	--xxxxl: clamp(2.49rem, calc(2.08rem + 2.06vw), 4.01rem);
 }
 
 .text-xs {
 	font-size: var(--xs);
 }
 .text-2xs {
-	font-size: var(--2xs);
+	font-size: var(--xxs);
 }
 .text {
 	font-size: var(--base);
@@ -104,23 +105,21 @@ ul {
 	line-height: 110%;
 }
 .text-2xl {
-	font-size: var(--2xl);
+	font-size: var(--xxl);
 }
 .text-3xl {
-	font-size: var(--3xl);
+	font-size: var(--xxxl);
 }
 .text-4xl {
-	font-size: var(--4xl);
+	font-size: var(--xxxxl);
 }
 
-* {
-	border-color: hsl(var(--dark));
-}
 
 body {
 	color-scheme: dark light;
 	background-color: hsl(var(--dark));
 	color: hsl(var(--dark-text));
+	border-color: hsl(var(--dark));
 }
 .card {
 	background-color: hsl(var(--dark-card));
@@ -130,15 +129,23 @@ body {
 	fill: hsl(var(--dark-text));
 }
 
-@media (prefers-color-scheme: light) {
-	body {
+@media(prefers-color-scheme: light) {
+	:root {
 		color-scheme: light;
+	}
+	body {
 		background-color: hsl(var(--light));
 		color: hsl(var(--dark));
+		border-color: red;
 	}
 	.icon-dark-white {
 		fill: hsl(var(--light));
 	}
+
+	.card {
+		background-color: red;
+	}
+
 }
 
 .link {
@@ -147,11 +154,11 @@ body {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 250ms;
 }
-link:hover {
+.link:hover {
 	color: hsl(var(--accent));
 	transform: scale(1.1);
 }
-link:focus {
+.link:focus {
 	color: hsl(var(--accent));
 	transform: scale(1.1);
 	outline: 2px solid transparent;
